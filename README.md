@@ -164,5 +164,48 @@ const saludar = function(nombre){
 
 ```
 
+# Ejercicio  Problema B
+
+- Crear mini-sistema para registrar presentes y ausentes
+
+- Pasados 30 días, mostrar situación final del alumno
+
+- Maximo de 10% de ausencias
+
+- Crear calculadora para simplificar trabajo
+
+```html
+
+
+```
+
+
+```js
+
+let free = false;
+
+const validarCliente = (time) => {
+    let edad = prompt("Cual es tu edad?")
+    if(edad > 18){
+        if(time >= 2 && time < 7 && free == false){
+            alert("puedes pasar gratis");
+            free = true;
+        } else{
+            alert(`son las ${time}:00Hs puedes, pasar pero pagando entrada`);
+        }
+
+    } else {
+    alert("fuera no puedes pasar, eres menor");
+    }
+}
+
+validarCliente(23)
+
+```
+```js
+
+
+
+```
 
 

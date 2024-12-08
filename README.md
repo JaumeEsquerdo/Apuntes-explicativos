@@ -204,8 +204,87 @@ validarCliente(23)
 ```
 ```js
 
+let cantidad = prompt("cuantos alumnos son?");
+let alumnosTotales = [];
 
+for(i=0; i < cantidad; i++){
+    alumnosTotales[i]= [prompt("nombre del alumno " + (i+1)),0] //el 0 es la cantidad de asistencias
+}
+//alumnosTotales que es un array tiene otro array dentro con el nombre y la cantidad de asistencias
+//entonces en alumnosTotales[i][1]++; aqui estaría la i seleccionando la posicion del array y el[1 estaría cogiendo el segundo elemento del array de dentro, es decir si es nombre y asistencias, cogeria la asistencia]
+
+const tomarAsistencia = (nombre, p)=>{ //p aqui es la posicion en la lista
+    let presencia = prompt(nombre);
+    if(presencia == "p"|| presencia == "P"){
+        alumnosTotales[p][1]++;
+    }
+}
+
+for (i=0; i<30; i++){
+    for(alumno in alumnosTotales){ //in pasa la posición si fuese OF pasaria el valor
+        tomarAsistencia(alumnosTotales[alumno][0],alumno);
+    }
+}
+
+for (alumno in alumnosTotales){
+    let resultado = `${alumnosTotales[alumno][0]}: 
+    ....Presentes: ${alumnosTotales[alumno][1]}:
+    .....Ausencias: ${30- pasrseInt(alumnosTotales[alumno][1])}  `;
+}
+if (30 - alumnosTotales[alumno][1] > 18){
+    resultado += "suspendido por asistencias";
+} else{
+    resultado += "";
+}
+document.write(resultado);
 
 ```
+
+```js
+const sumar = (num1,num2)=>{
+    return parseInt(num1)+ parseInt(num2);
+}
+const restar = (num1,num2)=>{
+    return parseInt(num1)- parseInt(num2);
+}
+const dividir = (num1,num2)=>{
+    return parseInt(num1)/ parseInt(num2);
+}
+const multiplicar = (num1,num2)=>{
+    return parseInt(num1)* parseInt(num2);
+}
+
+alert("que operacion quieres hacer?");
+let operacion = prompt("1:suma,2:resta,3:dividir,4:multiplicar");
+
+if (operacion ==1){
+    let numero1= prompt("primer numero para sumar");
+    let numero2= prompt("segundo numero para sumar");
+    resultado = suma(numero1,numero2);
+    alert(`tu resultado es ${resultado}`);
+}
+else if (operacion ==2){
+    let numero1= prompt("primer numero para restar");
+    let numero2= prompt("segundo numero para restar");
+    resultado = resta(numero1,numero2);
+    alert(`tu resultado es ${resultado}`);
+}
+
+else if (operacion ==3){
+    let numero1= prompt("primer numero para dividir");
+    let numero2= prompt("segundo numero para dividir");
+    resultado = dividir(numero1,numero2);
+    alert(`tu resultado es ${resultado}`);
+}
+
+else if (operacion ==4){
+    let numero1= prompt("primer numero para multiplicar");
+    let numero2= prompt("segundo numero para multiplicar");
+    resultado = multiplicar(numero1,numero2);
+    alert(`tu resultado es ${resultado}`);
+}
+else{
+    alert("no se ha encontrado la operacion");
+};
 
 

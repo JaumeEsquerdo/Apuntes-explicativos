@@ -80,7 +80,7 @@ for (animal in animales){
 document.write("<br>");
 
 for (animal of animales){
-    document.write(animal + "br"); //muestra el valor de la posición es decir el contenido
+    document.write(animal + "br"); //muestra el VALOR de la posición es decir el contenido
 }
 
 
@@ -91,7 +91,7 @@ array2 = ["pedro", "marcelo", array1];
 forRancio: //ESTO ES UNA ETIQUETA
 for (let array in array2){
     if (array == 2) {
-        for
+        
     }break forRancio; //para toda la etiqueta
 }
 
@@ -130,7 +130,7 @@ suma(33,44)
 //otro ejemplo
 function suma(num1,num2){
     let res = num1 + num2;
-    return res
+    return res;
 }
 
 let resultado = suma(20,25)
